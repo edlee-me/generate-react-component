@@ -1,6 +1,6 @@
 {
   "name": "generate-react-component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Generate a react component with CLI",
   "files": "index.js",
   "repository": "https://github.com/jonexiu/generate-react-component",
