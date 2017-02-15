@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Generate a react component folder with command",
   "files": "index.js",
-  "repository": {},
+  "repository": "https://github.com/jonexiu/generate-react-component",
   "author": "Ed Lee",
   "license": "MIT",
   "bin": {

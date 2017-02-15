@@ -12,6 +12,8 @@ var program = require('commander')
   .action(function (name) {
     componentName = name;
   })
+  .option('-p, --pure', 'Create Pure Function Component')
+  .option('-c, --css', `Add ${componentName}.css`)
   .parse(process.argv)
 
 createComponent(componentName);
@@ -23,26 +25,47 @@ function createComponent(name) {
     fs.mkdirSync(root);
   }
 
-  fs.writeFileSync(
-    path.join(root, `${name}.js`),
-    `/*\n<Project Name> Component\n${name}\n*/\n` +
-    `import React from 'react'\n` + 
-    `import s from './${name}.css'\n\n` + 
-    
-    `const ${name} = ({ props }) => {\n` +
-      `\treturn (\n` +
-        `\t\t<div>\n\t\t</div>\n` +
-      `\t)\n` + 
-    `}\n\n` +
-    `export default ${name}`
-  )
+  var cssLine = ''
+  if (program.css) {
+    fs.writeFileSync(
+      path.join(root, `${name}.css`),
+      `/*\n<Project Name> CSS Module\n${name}\n*/\n`
+    )
+    cssLine = `import s from './${name}.css'\n\n`
+  }
 
-  fs.writeFileSync(
-    path.join(root, `${name}.css`),
-    `/*\n<Project Name> CSS Module\n${name}\n*/\n`
-  )
+  if (program.pure) {
+    fs.writeFileSync(
+      path.join(root, `${name}.js`),
+      `/*\n<Project Name> Component\n${name}\n*/\n` +
+      `import React from 'react'\n` + 
+      cssLine + 
+      
+      `const ${name} = ({ props }) => {\n` +
+        `\treturn (\n` +
+          `\t\t<div>\n\t\t</div>\n` +
+        `\t)\n` + 
+      `}\n\n` +
+      `export default ${name}`
+    )
+  } else {
+    fs.writeFileSync(
+      path.join(root, `${name}.js`),
+      `/*\n<Project Name> Component\n${name}\n*/\n` +
+      `import React, { Component } from 'react'\n` + 
+      cssLine + 
+      `class Article extends Component {\n\n` +
+        `\tcomponentDidMount() {\n` +
+        `\t}\n\n` +
+        `\trender() {\n` +
+          `\t\treturn (\n` +
+          `\t\t)\n\n` +
+        `\t}\n\n` +
+      `}\n\n` +
+      `export default ${name}`
+    )
+  }
 
   console.log(`Component ${name} created`);
 }
-  // process.chdir(root);
 
