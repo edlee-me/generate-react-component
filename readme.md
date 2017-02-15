@@ -47,21 +47,21 @@ You may need to ```sudo``` it.
 ## Usage
 ### Generate Class Component
 Run
-```rccmp <ComponentName>```
+```rcmp <ComponentName>```
 This will create a folder of your component name, and a **Class Component** js file with the same name.
 <br>
 ### Generate Pure Function Component
 Run
-```rccmp <ComponentName> --pure```
+```rcmp <ComponentName> --pure```
 or
-```rccmp <ComponentName> -p```
+```rcmp <ComponentName> -p```
 This will create a folder of your component name, and **Pure Function Component** js file of the same name.
 <br>
 ### Generate Component (Class or Pure) with a CSS file
 Run
-```rccmp <ComponentName> --pure --css```
+```rcmp <ComponentName> --pure --css```
 or
-```rccmp <ComponentName> -p -c```
+```rcmp <ComponentName> -p -c```
 This will create a folder of your component name, and component (Functional if ```--pure```) js file of the same name, and a css file of the same name.
 
 <br>
