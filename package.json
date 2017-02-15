@@ -1,0 +1,17 @@
+{
+  "name": "generate-react-component",
+  "version": "0.1.0",
+  "description": "Generate a react component folder with command",
+  "files": "index.js",
+  "repository": {},
+  "author": "Ed Lee",
+  "license": "MIT",
+  "bin": {
+    "rccomp": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^2.0.0",
+    "program": "^0.0.0-12"
+  }
+}
