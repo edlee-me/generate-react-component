@@ -41,7 +41,7 @@ function createComponent(name) {
       `import React from 'react'\n` + 
       cssLine + 
       
-      `const ${name} = ({ props }) => {\n` +
+      `const ${name} = (props) => {\n` +
         `\treturn (\n` +
           `\t\t<div>\n\t\t</div>\n` +
         `\t)\n` + 
