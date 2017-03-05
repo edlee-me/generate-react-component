@@ -38,13 +38,12 @@ function createComponent(name) {
     fs.writeFileSync(
       path.join(root, `${name}.js`),
       `/*\n<Project Name> Component\n${name}\n*/\n` +
-      `import React from 'react'\n` + 
-      cssLine + 
-      
+      `import React from 'react'\n` +
+      cssLine +
       `const ${name} = (props) => {\n` +
         `\treturn (\n` +
           `\t\t<div>\n\t\t</div>\n` +
-        `\t)\n` + 
+        `\t)\n` +
       `}\n\n` +
       `export default ${name}`
     )
@@ -52,9 +51,9 @@ function createComponent(name) {
     fs.writeFileSync(
       path.join(root, `${name}.js`),
       `/*\n<Project Name> Component\n${name}\n*/\n` +
-      `import React, { Component } from 'react'\n` + 
-      cssLine + 
-      `class Article extends Component {\n\n` +
+      `import React, { Component } from 'react'\n` +
+      cssLine +
+      `class ${name} extends Component {\n\n` +
         `\tcomponentDidMount() {\n` +
         `\t}\n\n` +
         `\trender() {\n` +
@@ -68,4 +67,3 @@ function createComponent(name) {
 
   console.log(`Component ${name} created`);
 }
-
