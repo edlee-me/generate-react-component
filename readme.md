@@ -21,7 +21,7 @@ const Cmp = (props) => {
   )
 }
 
-export default Cover
+export default Cmp
 ```  
 
 Class Component:
