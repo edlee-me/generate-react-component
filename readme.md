@@ -53,6 +53,7 @@ Run
 You may need to ```sudo``` it.
 
 <br>
+
 ## Usage
 
 ### Generate Class Component
@@ -78,6 +79,7 @@ or
 This will create a folder of your component name, and **Pure Function Component** js file of the same name.
 
 <br>
+
 ### Generate Component (Class or Pure) with a CSS file
 
 Run
@@ -95,7 +97,7 @@ That's it!
 
 Enjoy and feel free to share your suggestion!
 
-###TODO
+### TODO
 
 - [ ] Add ```yarn add global```support
 - [ ] Add Chalk fancy colors
