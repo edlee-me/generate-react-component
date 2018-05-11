@@ -12,6 +12,6 @@
   "dependencies": {
     "commander": "^2.9.0",
     "fs-extra": "^2.0.0",
-    "program": "^0.0.0-12"
+    "program": "^1.0.0"
   }
 }
